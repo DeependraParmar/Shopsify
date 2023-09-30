@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "minLength": 10
+    },
+    "slug": {
+      "type": "uid",
+      "maxLength": 110,
+      "required": true,
+      "minLength": 10
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Eatables",
+        "Beverages",
+        "Clothing",
+        "Footwear",
+        "Sports",
+        "Home Decor",
+        "Stationary",
+        "Electronics",
+        "Electricals"
+      ],
+      "required": true
+    },
+    "size": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "green",
+        "blue",
+        "yellow",
+        "black",
+        "white"
+      ],
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "availableQty": {
+      "type": "integer",
+      "default": 10,
+      "required": true
+    }
+  }
+}
